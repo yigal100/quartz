@@ -1,17 +1,19 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Photon
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  baseUrl: https://yigal100.github.io/photon/
   ignorePatterns:
     - private
     - templates
     - .obsidian
+    - "**/drafts"
+    - "**/Drafts"
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
@@ -190,7 +192,13 @@ plugins:
     enabled: true
     options:
       provider: giscus
-      options: {}
+      options:
+        repo: yigal100/photon
+        repoId: R_kgDOQOwX7w
+        category: Announcements
+        categoryId: DIC_kwDOQOwX784CxacN
+        lang: en
+        inputPosition: top
     layout:
       position: afterBody
       priority: 10
@@ -198,8 +206,7 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        GitHub: https://github.com/yigal100/photon
   - source: github:quartz-community/recent-notes
     enabled: true
   - source: github:quartz-community/spacer

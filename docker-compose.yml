@@ -1,0 +1,29 @@
+services:
+  quartz:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      # Mount content directory for live editing
+      - ./content:/usr/src/app/content
+      # Mount quartz config file for live editing
+      - ./quartz.config.yaml:/usr/src/app/quartz.config.yaml
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+    
+  # Development service with hot reload
+  quartz-dev:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      # Mount entire project for development
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: pnpm run quartz build --serve
+    restart: unless-stopped
+    profiles:
+      - dev

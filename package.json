@@ -12,14 +12,15 @@
     "url": "https://github.com/jackyzha0/quartz.git"
   },
   "scripts": {
-    "quartz": "./quartz/bootstrap-cli.mjs",
-    "docs": "npx quartz build --serve -d docs",
-    "check": "tsc --noEmit && npx prettier . --check",
-    "format": "npx prettier . --write",
+    "preinstall": "npx only-allow pnpm",
+    "quartz": "node --no-deprecation ./quartz/bootstrap-cli.mjs",
+    "docs": "pnpm run quartz build --serve -d docs",
+    "check": "tsc --noEmit && pnpm prettier . --check",
+    "format": "pnpm prettier . --write",
     "test": "tsx --test",
-    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
+    "profile": "0x -D prof node --no-deprecation ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
-    "prebuild": "npm run install-plugins",
+    "prebuild": "pnpm run install-plugins",
     "changeset": "changeset",
     "version-packages": "changeset version && npm install --package-lock-only --ignore-scripts --no-audit --no-fund"
   },
