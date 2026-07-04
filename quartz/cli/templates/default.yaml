@@ -246,6 +246,10 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
+  - source: github:quartz-community/tui
+    enabled: true
+    options: {}
+    order: 50
 layout:
   groups:
     toolbar:
