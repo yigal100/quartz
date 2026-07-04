@@ -179,7 +179,7 @@
       "source": "github:quartz-community/obsidian-plugin-excalidraw",
       "resolved": "https://github.com/quartz-community/obsidian-plugin-excalidraw.git",
       "commit": "dad0a4c0abdc8b3c2786277a2cbd67dc039c754c",
-      "installedAt": "2026-06-03T13:32:35.851Z"
+      "installedAt": "2026-07-04T12:07:21.595Z"
     },
     "og-image": {
       "source": "github:quartz-community/og-image",
@@ -275,6 +275,12 @@
       "resolved": "https://github.com/quartz-community/tag-page.git",
       "commit": "eabf3eec55c0bab7f49e69957341f34d2ae3c5a1",
       "installedAt": "2026-06-03T13:32:36.377Z"
+    },
+    "tui": {
+      "source": "github:quartz-community/tui",
+      "resolved": "https://github.com/quartz-community/tui.git",
+      "commit": "d1d51a626ef84a6f4d0933cce2b834a9db92282b",
+      "installedAt": "2026-07-04T12:02:29.107Z"
     },
     "unlisted-pages": {
       "source": "github:quartz-community/unlisted-pages",
